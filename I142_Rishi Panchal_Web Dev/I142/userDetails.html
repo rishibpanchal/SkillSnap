@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div style="justify-content: center; align-items: center; display: flex; position: sticky; top: 20px; z-index: 1000;">
+
+        <div id="top">
+            <div class="logo">
+                <h1 id="company"></h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="/homepage.html">Home</a></li>
+                    <li><a href="/homepage"> See All Users</a></li> 
+                    <li><a href="/form.html">Edit Profile</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-picture">
+                <img src="assets\Screenshot 2024-08-13 190535.png" alt="Profile Picture">
+            </div>
+            <h2 class="name">John Doe</h2>
+            <p class="designation">Software Engineer</p>
+            <p class="accounts">john.doe@example.com</p>
+        </div>
+        <div class="main-content">
+            <div class="tabs">
+                <button class="tab-link active"  >About Me</button>
+                <button class="tab-link" >Education</button>
+                <button class="tab-link" >Skills</button>
+                <button class="tab-link" >Projects</button>
+            </div>
+            <div id="about" class="tab-content">
+                <h3>About Me</h3>
+                <p>This is the about me section.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

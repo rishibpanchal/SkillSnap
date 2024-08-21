@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-container h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        /* Styles for the form and its elements */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 400px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #007acc;
+            outline: none;
+        }
+        
+        /* Styles for the submit button */
+        .submit-button {
+            background-color: #007acc;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: #005fa3;
+        }   
+    </style>
+</head>
+<body>
+    <div style="justify-content: center; align-items: center; display: flex; position: sticky; margin-top: 20px; z-index: 1000;">
+
+        <div id="top">
+            <div class="logo">
+                <img src="./assets/logo.jpg" alt="logo goes here" style="height: 50px; margin:0;">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="./homePage.html"">Home</a></li>
+                    <li><a href="./allUsers.html"> See All Users</a></li> 
+                    <li><a href="/form.html">Edit Profile</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form action="./homePage.html" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
