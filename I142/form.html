@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles to maintain the color scheme */
+        .bg-dark {
+            background-color: #121212;
+        }
+        .bg-dark-secondary {
+            background-color: #1e1e1e;
+        }
+        .text-light {
+            color: #ffffff;
+        }
+        .text-secondary {
+            color: #b0bec5;
+        }
+        .border-dark {
+            border-color: #2e2e2e;
+        }
+        .bg-button-add {
+            background-color: #f9a825;
+        }
+        .bg-button-add-hover:hover {
+            background-color: #ffd54f;
+        }
+        .bg-button-delete {
+            background-color: #e53935;
+        }
+        .bg-button-delete-hover:hover {
+            background-color: #ef5350;
+        }
+        .bg-submit {
+            background-color: #26a69a;
+        }
+        .bg-submit-hover:hover {
+            background-color: #80cbc4;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light flex justify-center items-center h-screen m-0">
+    <div class="bg-dark-secondary p-6 rounded-lg w-156 max-h-[80vh] overflow-y-auto">
+        <h2 class="text-xl mb-5 text-light">User Info Form</h2>
+        <form>
+            <label for="username" class="block mb-2 text-secondary">Name:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your name" required class="w-full p-2 mb-4 border border-dark rounded bg-gray-800 text-light">
+            
+            <label for="profilePicture" class="block mb-2 text-secondary">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required class="w-full p-2 mb-4 border border-dark rounded bg-gray-800 text-light">
+
+            <label for="educationInput" class="block mb-2 text-secondary">Education:</label>
+            <div class="flex items-center mb-4">
+                <input type="text" id="educationInput" placeholder="Enter a degree, institution, or qualification" class="flex-1 p-2 border border-dark rounded bg-gray-800 text-light mr-2">
+                <button type="button" class="bg-button-add text-light py-1 px-2 rounded font-medium hover:bg-button-add-hover">Add</button>
+            </div>
+
+            <label for="skillInput" class="block mb-2 text-secondary">Skills:</label>
+            <div class="flex items-center mb-4">
+                <input type="text" id="skillInput" placeholder="Enter a skill" class="flex-1 p-2 border border-dark rounded bg-gray-800 text-light mr-2">
+                <button type="button" class="bg-button-add text-light py-1 px-2 rounded font-medium hover:bg-button-add-hover">Add</button>
+            </div>
+
+            <label for="experienceInput" class="block mb-2 text-secondary">Experience:</label>
+            <div class="flex items-center mb-4">
+                <input type="text" id="experienceInput" placeholder="Enter job title" class="flex-1 p-2 border border-dark rounded bg-gray-800 text-light mr-2">
+                <input type="text" id="yearInput" placeholder="Enter year" class="flex-1 p-2 border border-dark rounded bg-gray-800 text-light mr-2">
+                <button type="button" class="bg-button-add text-light py-1 px-2 rounded font-medium hover:bg-button-add-hover">Add</button>
+            </div>
+
+            <label for="projectInput" class="block mb-2 text-secondary">Past Projects:</label>
+            <div class="flex items-center mb-4">
+                <input type="text" id="projectInput" placeholder="Enter a project" class="flex-1 p-2 border border-dark rounded bg-gray-800 text-light mr-2">
+                <button type="button" class="bg-button-add text-light py-1 px-2 rounded font-medium hover:bg-button-add-hover">Add</button>
+            </div>
+
+            <input type="submit" value="Submit" class="w-full py-2 border-none rounded bg-submit text-light font-medium cursor-pointer hover:bg-submit-hover">
+        </form>
+    </div>
+</body>
+</html>

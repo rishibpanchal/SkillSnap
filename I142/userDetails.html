@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom colors to match the original design */
+        .bg-custom-primary {
+            background-color: #2A9D8F;
+        }
+        .bg-custom-secondary {
+            background-color: #E9C46A;
+        }
+        .bg-custom-accent {
+            background-color: #F4A261;
+        }
+        .bg-custom-dark {
+            background-color: #1c1c1c;
+        }
+        .bg-custom-darkest {
+            background-color: #083644;
+        }
+        .bg-custom-light {
+            background-color: #121212;
+        }
+        .bg-custom-border {
+            background-color: #2c2c2c;
+        }
+        .text-custom-light {
+            color: #ffffff;
+        }
+        .text-custom-dark {
+            color: #2e2e2e;
+        }
+        .border-custom {
+            border-color: #2e2e2e;
+        }
+        .border-custom-accent {
+            border-color: #f06c64;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="flex justify-center items-center sticky top-0 mt-5 z-50 bg-gray-800 bg-opacity-60 backdrop-blur-md border border-gray-700 p-4 shadow-lg">
+        <div id="top" class="flex items-center space-x-8">
+            <div class="logo">
+                <img src="./assets/logo.jpg" alt="logo goes here" class="h-12">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links flex space-x-8 text-lg">
+                    <li><a href="./homePage.html" class="text-white hover:text-blue-500">Home</a></li>
+                    <li><a href="./allUsers.html" class="text-white hover:text-blue-500">See All Users</a></li> 
+                    <li><a href="/form.html" class="text-white hover:text-blue-500">Edit Profile</a></li>
+                    <li><a href="./contact.html" class="text-white hover:text-blue-500">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="flex flex-grow p-8 space-x-12 ">
+        <!-- Sidebar -->
+        <div class="bg-custom-darkest p-6 rounded-lg border border-custom-accent w-80 flex flex-col items-center">
+            <div class="w-48 h-48 mb-4">
+                <img src="assets/Screenshot 2024-08-13 190535.png" alt="Profile Picture" class="w-full h-full rounded-full border-4 border-custom-accent object-cover">
+            </div>
+            <h2 class="text-3xl mb-2">John Doe</h2>
+            <p class="text-xl mb-1">Software Engineer</p>
+            <p class="text-lg">john.doe@example.com</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-custom-dark p-6 rounded-lg border border-custom-accent">
+            <div class="flex border-b-2 border-custom-accent mb-4">
+                <button class="tab-link text-custom-light bg-custom-dark py-2 px-4 rounded-t-lg font-semibold mr-2 transition-all duration-300 hover:bg-custom-darkest" onclick="openTab('about')">About Me</button>
+                <button class="tab-link text-custom-light bg-custom-dark py-2 px-4 rounded-t-lg font-semibold mr-2 transition-all duration-300 hover:bg-custom-darkest" onclick="openTab('education')">Education</button>
+                <button class="tab-link text-custom-light bg-custom-dark py-2 px-4 rounded-t-lg font-semibold mr-2 transition-all duration-300 hover:bg-custom-darkest" onclick="openTab('skills')">Skills</button>
+                <button class="tab-link text-custom-light bg-custom-dark py-2 px-4 rounded-t-lg font-semibold mr-2 transition-all duration-300 hover:bg-custom-darkest" onclick="openTab('projects')">Projects</button>
+            </div>
+            <div id="about" class="tab-content hidden">
+                <h3 class="text-xl mb-2">About Me</h3>
+                <p>This is the about me section.</p>
+            </div>
+            <!-- Additional tab content sections here -->
+        </div>
+    </div>
+
+</body>
+</html>
